@@ -17,7 +17,7 @@ By default the tool looks for Tabletop Simulator files at the default Windows di
 
 ## How to Run
 ### From Source
-1. Have `dotnet` installed with version 7.0 or higher. Download and install the SDK from [Microsoft](https://dotnet.microsoft.com/en-us/download).
+1. Have `dotnet` installed with version 6.0 or higher. Download and install the SDK from [Microsoft](https://dotnet.microsoft.com/en-us/download).
 2. Download or clone the project locally
 3. Open a terminal window and navigate to the folder you put the code into
 4. run `dotnet run --project .\TTSCleanup\TTSCleanup.csproj`
