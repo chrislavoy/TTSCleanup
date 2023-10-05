@@ -6,21 +6,16 @@ public static class Program
     {
 	    var filePath = @"%USERPROFILE%\Documents\My Games\Tabletop Simulator\Saves";
 	    filePath = Environment.ExpandEnvironmentVariables(filePath);
-	    
+
 	    if (args.Length > 0)
 	    {
-		    if (!Directory.Exists(args[0]))
-		    {
-			    Console.WriteLine($"{args[0]} not a valid directory");
-			    return;
-		    }
-
 		    filePath = args[0];
+		    filePath = Environment.ExpandEnvironmentVariables(filePath);
 	    }
 
 	    if (!Directory.Exists(filePath))
 	    {
-		    Console.WriteLine($"File path {filePath} does not exist");
+		    Console.WriteLine($"'{filePath}' is not a valid directory");
 		    return;
 	    }
         
