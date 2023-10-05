@@ -1,10 +1,30 @@
-﻿namespace TTSCleanup;
+﻿using System.Runtime.InteropServices;
+
+namespace TTSCleanup;
 
 public static class Program
 {
     public static void Main(string[] args)
     {
-	    var filePath = @"%USERPROFILE%\Documents\My Games\Tabletop Simulator\Saves";
+	    string filePath;
+
+	    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+	    {
+		    filePath = @"%USERPROFILE%\Documents\My Games\Tabletop Simulator\Saves";
+	    }
+	    else if(RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+	    {
+		    filePath = "~/.local/share/Tabletop Simulator/Saves";
+	    }
+	    else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+	    {
+		    filePath = "~/Library/Tabletop Simulator/Saves";
+	    }
+	    else
+	    {
+		    Console.WriteLine("Cannot determine operating system in use, exiting.");
+		    return;
+	    }
 
 	    if (args.Length > 0)
 	    {
