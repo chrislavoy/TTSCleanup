@@ -10,7 +10,7 @@ The tool assumes the following things about the offending script:
 
 If a line matching these assumptions is found its contents are trimmed to remove the offending script.
 
-By default the tool looks for Tabletop Simulator files at the default Windows directory `%USERPROFILE%\Documents\My Games\Tabletop Simulator\Saves`. If you are on a different platform or use a different directory for save files you can pass the path in as the first argument (see below)
+By default the tool looks for save files at the default [Tabletop Simulator save game directory](https://kb.tabletopsimulator.com/getting-started/technical-info/#save-game-data-location) such as `%USERPROFILE%\Documents\My Games\Tabletop Simulator\Saves` on Windows. If you are on a different platform or use a different directory for save files you can pass the path in as the first argument (see below)
 
 ## How to Run
 
@@ -24,11 +24,11 @@ By default the tool looks for Tabletop Simulator files at the default Windows di
    - If you need to specify a directory open a terminal and navigate to where the executable is saved and execute it by typing `.\TTSCleanup.exe "\My Custom Path\To\Tabletop Simulator\Saves"`
 
 ### From Source
-1. Have `dotnet` installed with version 6.0 or higher. Download and install the SDK from [Microsoft](https://dotnet.microsoft.com/en-us/download).
+1. Have `dotnet` installed with version 7.0 or higher. Download and install the SDK from [Microsoft](https://dotnet.microsoft.com/en-us/download).
 2. Download or clone the project locally
 3. Open a terminal window and navigate to the folder you put the code into
 4. run `dotnet run --project .\TTSCleanup\TTSCleanup.csproj`
-   - If you need to use a directory other than the default Windows directory you can pass it in as the first argument `dotnet run --project .\TTSCleanup\TTSCleanup.csproj "\My Custom Path\To\Tabletop Simulator\Saves"`
+   - If you need to use a directory other than the default directory you can pass it in as the first argument `dotnet run --project .\TTSCleanup\TTSCleanup.csproj "\My Custom Path\To\Tabletop Simulator\Saves"`
 
 ## Output
 The files cleaned and how many affected objects are printed to the screen during the cleaning process
