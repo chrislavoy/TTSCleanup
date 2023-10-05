@@ -32,9 +32,14 @@ jobs:
     - name: Publish
       run: dotnet publish TTSCleanup/TTSCleanup.csproj -c Release
       
-    - name: Upload to Release
-      uses: Shopify/upload-to-release@v1
+    - name: Upload to Release Action
+      # You may pin to the exact commit or the version.
+      # uses: Shopify/upload-to-release@9942a4c936dab172f7101dcc7dc20528ea949102
+      uses: Shopify/upload-to-release@v1.0.1
       with:
+        # Artifact name
         name: TTSCleanup
+        # Path to the file to upload
         path: TTSCleanup\bin\Release\net7.0\win-x64\native\*.exe
+        # Content type for the file
         repo-token: ${{ secrets.GITHUB_TOKEN }}
