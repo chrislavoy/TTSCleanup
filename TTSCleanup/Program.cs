@@ -5,13 +5,13 @@ public static class Program
     public static void Main(string[] args)
     {
 	    var filePath = @"%USERPROFILE%\Documents\My Games\Tabletop Simulator\Saves";
-	    filePath = Environment.ExpandEnvironmentVariables(filePath);
 
 	    if (args.Length > 0)
 	    {
 		    filePath = args[0];
-		    filePath = Environment.ExpandEnvironmentVariables(filePath);
 	    }
+	    
+	    filePath = Environment.ExpandEnvironmentVariables(filePath);
 
 	    if (!Directory.Exists(filePath))
 	    {
