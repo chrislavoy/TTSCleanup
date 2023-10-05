@@ -1,5 +1,7 @@
 # TTSCleanup
 
+[![Build](https://github.com/chrislavoy/TTSCleanup/actions/workflows/build.yml/badge.svg)](https://github.com/chrislavoy/TTSCleanup/actions/workflows/build.yml)
+
 The goal of this tool is to remove the lua script that replicates itself across all objects in a save file for Tabletop Simulator. It does this by scanning all of your Tabletop Simulator save files line by line to remove any occurrences of the script. It attempts to only remove the offending script and leave any existing lua code in place.
 
 The tool assumes the following things about the offending script:
