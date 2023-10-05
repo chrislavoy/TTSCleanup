@@ -21,7 +21,7 @@ By default the tool looks for Tabletop Simulator files at the default Windows di
 1. Download the provided executable
 2. Run the executbale
    - If you use the default saves directory you can double click the exe file and it will run automatically
-   - If you need to specify a directory open a terminal and navigate to where the executable is saved.
+   - If you need to specify a directory open a terminal and navigate to where the executable is saved and execute it by typing `.\TTSCleanup.exe "\My Custom Path\To\Tabletop Simulator\Saves"`
 
 ### From Source
 1. Have `dotnet` installed with version 6.0 or higher. Download and install the SDK from [Microsoft](https://dotnet.microsoft.com/en-us/download).
